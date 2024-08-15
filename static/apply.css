@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sankofa+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+main{
+position: relative;
+}
+
+.flash-message {
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    position: fixed; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1000; 
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+.flash-message.fade-out {
+    opacity: 0; 
+}
+
+.flash-message.success {
+    background-color: #4CAF50; /* Green */
+}
+
+.flash-message.error {
+    background-color: #F44336; /* Red */
+}
+
+.flash-message.info {
+    background-color: #2196F3; /* Blue */
+}
+
+.flash-message.warning {
+    background-color: #FFC107; 
+    color: #000; 
+}
+
+.flash-message {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* APPLY.PHP CSS */
+.wrapper{
+    width: 90%;
+    min-height: 100vh;
+    margin:  0 auto;;
+}
+
+html{
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+legend {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: lightgrey;
+    color: black;
+    font-weight: bold;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.form-group{
+    width: 100%;
+    display: flex;
+}
+
+.flex-right{
+    width: 80%;
+}
+
+.flex-left{
+    width: 20%;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="tel"],
+form input[type="number"],
+form select,
+button,
+form textarea,
+.confirm-btn{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    background: red;
+    color:white
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    padding:10px 0px 10px 0px;
+    margin-bottom: 10px;
+}
+.header {
+    text-align: center;
+}
+
+.header .logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.inline{
+    display: flex;
+    
+}
+
+.shrink{
+    width: 100px;
+    position: absolute;
+    top: 20px
+}
+
+.pad-bot{
+    position: relative;
+}
+
+.confirm{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    display: none;
+}
+
+.confirm-btn{
+    width: 100%;
+    position: absolute;
+    z-index: 11;
+}
+
+.form-group-confirm{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.inline{
+    width: 100%;
+}
+
+.form-group-confirm input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    word-wrap: break-word; /* or overflow-wrap: break-word; */
+}
+
+.form-group-confirm label {
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+    .form-group label{
+        font-size: 14px;
+    }
+}
+@media print {
+    html{
+        font-size: 15px;
+    }
+    .flex-left{
+        width: 30%;
+    }
+    .flex-right{
+        width: 80%;
+    }
+   @page {
+    margin: 0; /* Set page margins for printing */
+    }
+}
+
