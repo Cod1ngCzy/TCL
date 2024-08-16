@@ -554,6 +554,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Optionally clear or reset any temporary data if needed
             });
 
+            document.getElementById('back').addEventListener("click", () => {
+                window.location.href = "tcl.php";
+            });
+
         </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
         header('Location: dashlog.php');
     }
 
-    $fetch_name = "SELECT * FROM applicant_login";
+    $fetch_name = "SELECT * FROM applicant";
     $result = mysqli_query($sql_connection, $fetch_name);
 ?>
 
@@ -144,7 +144,7 @@
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
-                        echo "<td>" . htmlspecialchars($row['firstname']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['id']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['user_id']) . "</td>";
                         echo "<td>PENDING</td>";
                         echo "<td><button class='view-button' data-user-id='" . htmlspecialchars($row['user_id']) . "'>View</button></td>";
