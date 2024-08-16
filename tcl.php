@@ -1,21 +1,3 @@
-<?php
-    session_start();
-
-    require("./static/functions.php");
-    require("./static/connection.php");
-
-    $flash_message = new FlashMessage();
-    
-    if($_SERVER['REQUEST_METHOD'] == 'POST')
-    {
-        if($matches = get_applicant($sql_connection, $_POST['applicant_id'])){
-            $_SESSION['user_id'] = $matches['user_id'];
-            header('Location: applicant.php');
-        } else {
-            $flash_message->Set('Applicant Not Found', 'error');
-        }
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +8,6 @@
     <title>TCL</title>
 </head>
 <body>
-    <?php $flash_message->Display(); // Display the flash message ?>
     <nav>
         <img src="./assets/tcl-logo.svg" alt="tcl logo">
         <div class="social-media-icons">
@@ -41,7 +22,7 @@
         <div class="app-wrapper style-bg">
             <div class="upper">
                 <img class="float-img" src="./assets/nav-logo.png" alt="Company Logo" class="logo">
-                <button type="button" id="apply">Apply</button>
+                <label>INSPIRE GREATNESS</label>
             </div>
             <div class="main-cont">
                 <div class="scrolling">
@@ -61,8 +42,8 @@
             </div>
         </div>
         <form method="POST" class="form-wrapper style-bg">
-            <input type="text" id="applicant_id" name="applicant_id" placeholder="Search Applicant ID" required>
-            <button type="submit" id="submit">Search</button>
+            <button type="button" id="applicant">Applicant</button>
+            <button type="button" id="admin">Admin Department</button>
         </form>
     </main>
     <script>
@@ -100,9 +81,15 @@
             });
         });
 
-        document.getElementById('apply').addEventListener("click", () => {
+        document.getElementById('applicant').addEventListener("click", () => {
             window.location.href ="/Test/apply.php";
         })
+
+        
+        document.getElementById('admin').addEventListener("click", () => {
+            window.location.href ="/Test/dashlog.php";
+        })
+
 
         document.addEventListener('DOMContentLoaded', function() {
                 var flashMessage = document.querySelector('.flash-message');

@@ -466,7 +466,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </div>
             </fieldset>
-            <button type="button" id="submit">Submit</button>
+            <button type="button" id="submit">View Form</button>
         </form>
     </main>
     <script>

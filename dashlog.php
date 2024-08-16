@@ -83,6 +83,7 @@
             border-radius: 10px;
             flex-direction: column;
             padding: 10px;
+            position: relative;
         }
 
         .form-group{
@@ -144,7 +145,7 @@
             touch-action: manipulation;
             vertical-align: middle;
             position: absolute;
-            bottom: -20px;
+            bottom: -70px;
         }
 
         .button-24:hover,

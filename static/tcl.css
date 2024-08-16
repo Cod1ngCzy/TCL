@@ -62,14 +62,9 @@ nav img{
 }
 
 .app-wrapper{
-    width: 600px;
+    width: 800px;
     border-radius: 15px 10px 0px 0px;
     position: relative;
-}
-
-.app-wrapper button{
-    width: 100%;
-    margin: 0 auto;
 }
 
 .style-bg{
@@ -97,19 +92,15 @@ nav img{
     display: flex;
 }
 
-.upper button{
+.upper label{
     width: 100%;
-    background-color: #f15535;
-    border: 1px solid #00748f;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
-    color: #fafafa;
-    cursor: pointer;
-    float: right;
-    font: 15px Arial, Helvetica;
+    background-color: #efefef;
+    color: grey;
     padding: 0;
-    text-transform: uppercase;
-    text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+    text-align: right;
+    font-size: 2em;
+    padding: 5px 10px 5px 0px;
+    font-weight: 600;
 }
 
 .main-cont{
@@ -164,36 +155,20 @@ nav img{
 .form-wrapper {
     overflow: hidden;
     padding: 8px;
-    width: 600px;
+    width: 800px;
     height: 100px;
     border-radius: 0px 0px 0px 50px;
     border-top: 0px;
     }
     
-.form-wrapper #applicant_id {
-    border: 1px solid #CCC;
-    box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
-    border-radius: 3px 3px;
-    color: black;
-    float: left;
-    font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
-    height: 40px;
-    padding: 10px;
-    width: 320px;
-}
 
-.form-wrapper #applicant_id:focus {
-    border-color: #aaa;
-    box-shadow: 0 1px 1px #bbb inset;
-    outline: 0;
-}
-
-.form-wrapper #submit {
+.form-wrapper #applicant,
+.form-wrapper #admin{
     background-color: #f15535;
-    border: 1px solid #00748f;
+    border: 1px solid #f15535;
     border-radius: 3px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
-    color: #fafafa;
+    color: #efefef;
     cursor: pointer;
     height: 42px;
     float: right;
@@ -201,12 +176,13 @@ nav img{
     padding: 0;
     text-transform: uppercase;
     text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
-    width: 100px;
+    width: 80%;
+    margin: 0px 5px;
 }
 
 .form-wrapper #submit:active {
-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-outline: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    outline: 0;
 }
 
 .form-wrapper #submit::-moz-focus-inner {
@@ -256,4 +232,19 @@ border: 0;
 
 .flash-message {
     animation: fadeIn 0.5s ease-out;
+}
+
+@media screen and (max-width: 850px) {
+    .app-wrapper,
+    .form-wrapper{
+        width: 100%;
+    }
+
+    .form-wrapper{
+        height: 20vh;
+    }
+
+    nav{
+        display: none;
+    }
 }

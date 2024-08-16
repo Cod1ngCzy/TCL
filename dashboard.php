@@ -147,7 +147,7 @@
                         echo "<td>" . htmlspecialchars($row['id']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['user_id']) . "</td>";
                         echo "<td>PENDING</td>";
-                        echo "<td><button class='view-button' data-user-id='" . htmlspecialchars($row['user_id']) . "'>View</button></td>";
+                        echo "<td><button class='view-button' data-user-id='" . htmlspecialchars($row['user_id']) . "' name='" . htmlspecialchars($row['user_id']) . "'>View</button></td>";
                         echo "</tr>";
                     }
                 } else {
@@ -161,7 +161,14 @@
             </div>
         </div>
         <script>
-            
+            const viewBtn = document.querySelectorAll('.view-button');
+
+            viewBtn.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    window.location.href = `/Test/get_user.php?userId=${btn.name}`;
+                });
+            });
+
         </script>
     </main>
 </body>

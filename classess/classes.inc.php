@@ -69,49 +69,47 @@
         }
     }
 
-        public static function GET_TABLE_DATA(){
-            foreach(self::$db_tables as $tables => $columns){
-                echo $tables;
-                foreach($columns as $column){
-                    echo $column['Field'] . "<br>";
-                }
-            }
-        }
-
-        public static function QUERY($table_name){
-            if (!isset($table_name) || $table_name == ""){
-                self::$connection_properties['STATUS'] = 'Uncaught Exception in Database';
-                self::$connection_properties['ERROR'] = 'Table not Set';
-                return;
-            } else {
-                $query = "SELECT * FROM $table_name";
-                $query_result = mysqli_query(self::$sql_connection, $query);
-                self::$connection_properties['INFO'] = "Query Successful";
-                return mysqli_fetch_assoc($query_result);
-            }
-        }
-
-        public static function QUERY_FILTER($table_name, $column_data){
-            if (!isset($table_name) || $table_name == ""){
-                self::$connection_properties['STATUS'] = 'Uncaught Exception in Database';
-                self::$connection_properties['ERROR'] = 'Table not Set';
-                return;
-            } else if (!isset($column_data) || $column_data == ""){
-                self::$connection_properties['STATUS'] = 'Uncaught Exception in Database';
-                self::$connection_properties['ERROR'] = 'Table is set but no data hiven';
-                return;
-            } else {
-                $query = "SELECT * FROM $table_name WHERE $column_data limit 1";
-                $query_result = mysqli_query(self::$sql_connection, $query);
-                self::$connection_properties['INFO'] = "Query Successful";
-                return mysqli_fetch_assoc($query_result);
+    public static function GET_TABLE_DATA(){
+        foreach(self::$db_tables as $tables => $columns){
+            echo $tables;
+            foreach($columns as $column){
+                echo $column['Field'] . "<br>";
             }
         }
     }
 
-    $tables = MySQL::SET_CONNECTION("localhost","root","","jobapplicant");
+    public static function QUERY($table_name){
+        if (!isset($table_name) || $table_name == ""){
+            self::$connection_properties['STATUS'] = 'Uncaught Exception in Database';
+            self::$connection_properties['ERROR'] = 'Table not Set';
+            return;
+        } else {
+            $query = "SELECT * FROM $table_name";
+            $query_result = mysqli_query(self::$sql_connection, $query);
+            self::$connection_properties['INFO'] = "Query Successful";
+            return mysqli_fetch_assoc($query_result);
+        }
+    }
 
-    MySQL::GET_TABLE_DATA();
+    public static function QUERY_FILTER($table_name, $column_data){
+        if (!isset($table_name) || $table_name == ""){
+            self::$connection_properties['STATUS'] = 'Uncaught Exception in Database';
+            self::$connection_properties['ERROR'] = 'Table not Set';
+            return;
+        } else if (!isset($column_data) || $column_data == ""){
+            self::$connection_properties['STATUS'] = 'Uncaught Exception in Database';
+            self::$connection_properties['ERROR'] = 'Table is set but no data hiven';
+            return;
+        } else {
+            $query = "SELECT * FROM $table_name WHERE $column_data limit 1";
+            $query_result = mysqli_query(self::$sql_connection, $query);
+            self::$connection_properties['INFO'] = "Query Successful";
+            return mysqli_fetch_assoc($query_result);
+        }
+    }
+    }
+
+    $tables = MySQL::SET_CONNECTION("localhost","root","","jobapplicant");
 
 ?>
 
