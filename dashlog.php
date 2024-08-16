@@ -64,6 +64,7 @@
         nav img{
             width: 100px;
             height: 100px;
+            cursor: pointer;
         }
         
         header{
@@ -163,7 +164,7 @@
 </head>
 <body>
     <nav>
-        <img src="./assets/tcl-logo.svg" alt="tcl logo">
+        <img id="home" src="./assets/tcl-logo.svg" alt="tcl logo">
     </nav>
     <main>
         <header>TCL ADMIN</header>
@@ -194,6 +195,10 @@
                     flashMessage.remove();
                 }, 6000); // 6000 milliseconds = 6 seconds (to ensure it has fully faded out)
             }
+        });
+
+        document.addEventListener("click", () => {
+            window.location.href = "/Test/tcl.php";
         });
     </script>
 </body>

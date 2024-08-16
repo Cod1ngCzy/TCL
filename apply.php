@@ -507,7 +507,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     wrapperDiv.className = 'inline';
             
                     const valueLabel = document.createElement('label');
-                    valueLabel.textContent = input.name.toUpperCase();
+                    valueLabel.textContent = input.name.charAt(0).toUpperCase() + input.name.slice(1);
             
                     let clone;
             
