@@ -349,7 +349,7 @@
             </div>
             <!--PERSONAL INFO INPUTS-->
             <h1 class="header-span">I. Personal Information</h1>
-            <div class="personal-info wrapper-span-full flex">
+            <div class="personal-info wrapper-span-full flex" id="Personal_Information">
                 <div class="group">
                     <label for="surname">Surname</label>
                     <input type="text" id="surname" name="surname" placeholder="Surname">
@@ -390,7 +390,7 @@
                 
                 <div class="group">
                     <label for="civil-status">Civil Status</label>
-                    <select id="civil-status" name="civilstatus">
+                    <select id="civilstatus" name="civilstatus">
                         <option value="" disabled selected>Select Civil Status</option>
                         <option value="single">Single</option>
                         <option value="married">Married</option>
@@ -411,8 +411,8 @@
                 </div>
                 
                 <div class="group">
-                    <label for="blood-type">Blood Type</label>
-                    <select id="blood-type" name="bloodtype">
+                    <label for="bloodtype">Blood Type</label>
+                    <select id="bloodtype" name="bloodtype">
                         <option value="" disabled selected>Select Blood Type</option>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option>
@@ -483,7 +483,7 @@
             <!--PERSONAL INFO INPUTS-->
             <!--FAMILY INFO INPUTS-->
             <h1 class="header-span">II. Family Background</h1>
-            <div class="family-background  wrapper-span-full flex">
+            <div class="family-background  wrapper-span-full flex " id="Family_Information"> 
                 <div class="span no-border group">
                     <label for="spouse">Spouse's Information</label>
                     <div class="column">
@@ -515,7 +515,7 @@
             <!--FAMILY INFO INPUTS-->
             <!--EDUCATIONAL INFO INPUTS-->
             <h1 class="header-span">III. Educational Background</h1>
-            <div class="educational-background wrapper-span-full flex">
+            <div class="educational-background wrapper-span-full flex" id="Educational_Information">
                 <div class="group-inline header group span ">
                     <label class="header-middle">LEVEL</label>
                     <label class="header-middle">NAME OF SCHOOL</label>
@@ -555,7 +555,7 @@
             </div>
             <!--WORK EXPERIENCE INFO INPUTS-->
             <h1 class="header-span">IV. Work Experience</h1>
-            <div class="work-background wrapper-span-full flex">
+            <div class="work-background wrapper-span-full flex" id="Work_Information">
                 <div class="group-inline header group span">
                     <label class="header-middle">INCLUSIVE DATES</label>
                     <label class="header-middle">POSITION TITLE</label>
@@ -605,7 +605,7 @@
             <!--WORK EXPERIENCE INFO INPUTS-->
             <!--VOLUNTARY WORK INFO INPUTS-->
             <h1 class="header-span">V. Voluntary Work Or Involvement In Civic / Non Government / Voluntary Organizations</h1>
-            <div class="voluntary-work wrapper-span-full flex">
+            <div class="voluntary-work wrapper-span-full flex" id="Voluntary_Information">
                 <div class="odd-headers">
                     <label class="header-middle">NAME AND ADDRESS OF ORGANIZATION</label>
                     <label class="header-middle">INCLUSIVE DATES</label>
@@ -638,7 +638,7 @@
             <!--VOLUNTARY WORK INFO INPUTS-->
             <!--LEARNING AND DEVELOPMENT (L&D) / INTERVENTIONS / TRAINING PROGRAMS ATTENDED-->
             <h1 class="header-span">VI. Learning AND Development (L&D) / Interventions / Training Programs Attended</h1>
-            <div class="learning-development wrapper-span-full flex">
+            <div class="learning-development wrapper-span-full flex" id="Learning_Development_Information">
                 <div class="odd-headers">
                     <label class="header-middle">TITLE OF L&D INTERVENTION OR TRAINING PROGRAMS</label>
                     <label class="header-middle">INCLUSIVE DATES</label>
@@ -671,7 +671,7 @@
             <!--LEARNING AND DEVELOPMENT (L&D) / INTERVENTIONS / TRAINING PROGRAMS ATTENDED-->
             <!--OTHER INFORMATION-->
             <h1 class="header-span">VII. Other Information</h1>
-            <div class="other-information">
+            <div class="other-information" id="Other_Information">
                 <div class="odd-headers-three">
                     <label class="header-middle">SPECIAL SKILLS and HOBBIES</label>
                     <label class="header-middle">NON ACADEMIC DISTINCTIONS / RECOGNITION (Write in full)</label>
@@ -767,6 +767,21 @@
         document.getElementById('back').addEventListener("click", () => {
             window.location.href = "tcl.php";
         });
+
+        function get_object(idName, indexNumber=""){
+            const arrayContent = Array.from(document.getElementById(`${idName}`).children)
+            const inputObj = {}
+            arrayContent.forEach(child => {
+                const input = child.childNodes[indexNumber];
+
+                inputObj[input.name] = input.value;
+             });
+
+             return inputObj;
+        }
+
+        console.log(get_object("Personal_Information", 3));
+        console.log(get_object("Educational_Information"));
     </script>
 </body>
 </html>
