@@ -47,3 +47,16 @@ $personal = array(
     "resaddress" => isset($_POST['resaddress']) ? mysqli_real_escape_string($sql_connection, $_POST['resaddress']) : null,
     "permaddress" => isset($_POST['permaddress']) ? mysqli_real_escape_string($sql_connection, $_POST['permaddress']) : null
 );
+
+$family_background = array(
+    "spousesurname" => isset($_POST['spousesurname']) ? mysqli_real_escape_string($sql_connection, $_POST['spousesurname']) : null,
+    "spousefirstname" => isset($_POST['spousefirstname']) ? mysqli_real_escape_string($sql_connection, $_POST['spousefirstname']) : null,
+    "spousemiddlename" => isset($_POST['spousemiddlename']) ? mysqli_real_escape_string($sql_connection, $_POST['spousemiddlename']) : null,
+    "spouseoccupation" => isset($_POST['spouseoccupation']) ? mysqli_real_escape_string($sql_connection, $_POST['spouseoccupation']) : null,
+    "fathersurname" => isset($_POST['fathersurname']) ? mysqli_real_escape_string($sql_connection, $_POST['fathersurname']) : null,
+    "fatherfirstname" => isset($_POST['fatherfirstname']) ? mysqli_real_escape_string($sql_connection, $_POST['fatherfirstname']) : null,
+    "fathermiddlename" => isset($_POST['fathermiddlename']) ? mysqli_real_escape_string($sql_connection, $_POST['fathermiddlename']) : null,
+    "mothermaidenname" => isset($_POST['mothermaidenname']) ? mysqli_real_escape_string($sql_connection, $_POST['mothermaidenname']) : null,
+    "motherfirstname" => isset($_POST['motherfirstname']) ? mysqli_real_escape_string($sql_connection, $_POST['motherfirstname']) : null,
+    "mothermiddlename" => isset($_POST['mothermiddlename']) ? mysqli_real_escape_string($sql_connection, $_POST['mothermiddlename']) : null
+);

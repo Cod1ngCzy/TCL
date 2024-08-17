@@ -17,20 +17,42 @@
             align-items: center;
         }
 
-        .group{
+        .header-title{
+            width: 100%;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .header-title label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-size: 2.5em;
+            color: #f15535;
+        }
+
+        .header-title img{
+            margin-right: 20px;
+        }
+        .group,
+        .odd-headers,
+        .odd-headers-three{
             width: 100%;
             display: flex;
-            height: 20px;
+            border: 1px solid black;
         }
 
         .group label{
             font-size: 10px;
             width: 20%;
-            height: 30px;
-            border-right: 1px solid black;
-            border-left: 1px solid black;
             background-color: #efefef;
             padding: 5px 0px 2px 5px;
+            border-right: 1px solid black;
+            margin-right:1px;
         }
 
         .group input[type="text"],
@@ -43,28 +65,51 @@
             font-size: 10px;
             width: 80%;
             border: none;
-            border-right: 1px solid black;
-            border-bottom: 1px solid black;
-            padding: 2px;
-            box-sizing: border-box; /* Ensures padding is included in the width */
+            padding: 0px 0px 0px 6px;
         }
 
-        .group input[type="text"]:focus,
-        .group input[type="date"]:focus,
-        .group input[type="number"]:focus,
-        .group input[type="email"]:focus,
-        select:focus,
-        textarea:focus {
+        .group-contact input[type="text"]{
+            border-right: 1px solid black;
+            margin: 0px 1px 0px 0px;
+        }
+
+        .group-inline{
+            width: 100%;
+        }
+
+        .group-inline input[type="text"]{
+            border-right: 1px solid black;
+            height: 35px;
+            margin: 0px 1px 0px 0px;
+        }
+
+        .group-inline label{
+            width: 100%;
+            font-size: 8.5px;
+        }
+
+         input:focus,
+         select:focus,
+         textarea:focus {
             outline: none; /* Removes default focus outline */
-            border-right: 1px solid black; /* Keep right border */
-            border-bottom: 1px solid black; /* Keep bottom border */
+
         }
 
         .header-span{
-            width: 99.1.2.3.4%;
+            width: 100%;
             background-color: #efefef;
             font-size: 1.2em;
-            border: 2px solid black;
+            border: 1px solid black;
+            margin: 1px;
+            padding: 2px;
+            font-style: italic;
+        }
+
+        .header-middle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .wrapper-span-full{
@@ -72,14 +117,141 @@
         }
 
         .span{
-            height: 80px;
-            border-top:1px solid black ;
+            height: 40px;
+        }
+
+        .span input[type="text"]{
+            height: 15px;
         }
         
         .span label{
             height: 100%;
         }
 
+        .column{
+            width: 40%;
+        }
+
+        .column input[type='text']{
+            width: 100%;
+        }
+
+        .height-max{
+            height: 60px;
+        }
+
+        .width-max{
+            width: 80%;
+        }
+
+        .no-border input[type='text']{
+            border-right: none;
+            border: none;
+        }
+
+        .border{
+            border: 1px solid black;
+        }
+
+        .odd-headers label,
+        .odd-headers-three label{
+            font-size: 10px;
+            background-color: #efefef;
+            padding: 5px 0px 2px 5px;
+            border-right: 1px solid black;
+            margin-right:1px;
+        }
+
+        .odd-headers label:nth-child(1),
+        .odd-headers input[type="text"]:nth-child(1){
+            width: 30%;
+        }
+
+        .odd-headers label:nth-child(2),
+        .odd-headers label:nth-child(3),
+        .odd-headers label:nth-child(4),
+        .odd-headers input[type="text"]:nth-child(2),
+        .odd-headers input[type="text"]:nth-child(3),
+        .odd-headers input[type="text"]:nth-child(4){
+            width: 13%;
+        }
+
+        .odd-headers label:nth-child(5),
+        .odd-headers input[type="text"]:nth-child(5){
+            width: 50%;
+        }
+        
+        .odd-headers-three label,
+        .odd-headers-three input[type="text"]{
+            width: 40%;
+        }
+
+        .odd-headers input[type="text"],
+        .odd-headers-three input[type="text"]{
+            border-right:1px solid black ;
+            height: 30px;
+            margin: 0px 1px 1px 0px;
+        }
+
+        .other-info-span{
+            width: 100%;
+            display: flex;
+        }
+
+        .contact{
+            width: 65%;
+        }
+
+        .contact label{
+            font-size: 10px;
+            background-color: #efefef;
+            padding: 5px 0px 2px 5px;
+        }
+
+        .picture-wrapper{
+            width: 36%;
+            border-right: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .picture{
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            font-size: .5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            padding: 5px;
+        }
+
+        .reference input[type="text"]{
+            width: 32.4.5%;
+        }
+
+        .oath{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: .5em;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .oath h3{
+            padding: 0px 0px 10px 0px;
+        }
+
+        .oath input{
+            width: 50%;
+            text-align: center;
+            background-color: #efefef;
+        }
         /*CSS INHERIT PROPERTIES*/
 
         main{
@@ -89,13 +261,48 @@
         }
 
         .form-wrapper{
-            width: 1000px;
+            width: 800px;
             height: 800px;
             min-width: none;
         }
 
-        .personal-info{
+        .personal-info,
+        .family-background,
+        .educational-background,
+        .work-background,
+        .voluntary-work,
+        .learning-development{
             flex-direction: column;
+        }
+
+        @media print {
+            main {
+                max-width: 90%; /* Set the maximum width for the printed content */
+                margin: 0 auto;   /* Center the content on the page */
+            }
+        
+            /* Additional print-specific styles */
+            .no-print {
+                display: none; /* Hide elements that should not appear in print */
+            }
+
+            .group-inline label{
+                width: 100px;
+                font-size: 8.5px;
+            }
+
+            .group-inline input[type="text"]{
+                margin: 0px 1px;
+            }
+
+            .group-inline {
+                width: 100%;
+            }
+            
+            .other-info-span{
+                border-top: 1px solid black;
+                margin-top: 300px;
+            }
         }
 
     </style>
@@ -103,9 +310,14 @@
 <body>
     <main class="flex">
         <form method="POST" class="form-wrapper">
-            <div class="header-title"> <img src="./assets/tcl-logo.svg" alt="tcl logo"> </div>
+            <div class="header-title"> 
+                <label>
+                    <img src="./assets/tcl-logo.svg" alt="tcl logo"> 
+                    PERSONAL DATA SHEET
+                </label>
+            </div>
             <!--PERSONAL INFO INPUTS-->
-            <h1 class="header-span">Personal Information</h1>
+            <h1 class="header-span">I. Personal Information</h1>
             <div class="personal-info wrapper-span-full flex">
                 <div class="group">
                     <label for="surname">Surname</label>
@@ -120,7 +332,7 @@
                     <label for="middlename">Middle Name</label>
                     <input type="text" id="middlename" name="middlename" placeholder="Middle Name">
                 </div>
-                <hr style="background-color:black; border: 1px solid black; width: 100%; margin: 0px 0px;">    
+
                 <div class="group">
                     <label for="dob">Date of Birth</label>
                     <input type="date" id="dob" name="dob" placeholder="Date of Birth">
@@ -239,11 +451,284 @@
             </div>
             <!--PERSONAL INFO INPUTS-->
             <!--FAMILY INFO INPUTS-->
-            <h1 class="header-span">Family Background</h1>
+            <h1 class="header-span">II. Family Background</h1>
             <div class="family-background  wrapper-span-full flex">
-                
+                <div class="span no-border group">
+                    <label for="spouse">Spouse's Information</label>
+                    <div class="column">
+                        <input type="text" id="spouse-surname" name="spousesurname" placeholder="Enter spouse's surname">
+                        <input type="text" id="spouse-first-name" name="spousefirstname" placeholder="Enter spouse's first name">
+                    </div>
+                    <div class="column">
+                        <input type="text" id="spouse-middle-name" name="spousemiddlename" placeholder="Enter spouse's middle name">
+                        <input type="text" id="spouse-occupation" name="spouseoccupation" placeholder="Enter spouse's occupation">
+                    </div>
+                </div>
+                <div class="span height-max no-border group">
+                    <label for="spouse">Father's Information</label>
+                    <div class="width-max column">
+                        <input type="text" id="father-surname" name="fathersurname" placeholder="Enter father's surname">
+                        <input type="text" id="father-first-name" name="fatherfirstname" placeholder="Enter father's first name">
+                        <input type="text" id="father-middle-name" name="fathermiddlename" placeholder="Enter father's middle name">
+                    </div>
+                </div>
+                <div class="span height-max no-border group">
+                    <label for="spouse">Mother's Information</label>
+                    <div class="width-max column">
+                        <input type="text" id="mother-maiden-name" name="mothermaidenname" placeholder="Enter mother's maiden name">
+                        <input type="text" id="mother-first-name" name="motherfirstname" placeholder="Enter mother's first name">
+                        <input type="text" id="mother-middle-name" name="mothermiddlename" placeholder="Enter mother's middle name">
+                    </div>
+                </div>
             </div>
             <!--FAMILY INFO INPUTS-->
+            <!--EDUCATIONAL INFO INPUTS-->
+            <h1 class="header-span">III. Educational Background</h1>
+            <div class="educational-background wrapper-span-full flex">
+                <div class="group-inline header group span ">
+                    <label class="header-middle">LEVEL</label>
+                    <label class="header-middle">NAME OF SCHOOL</label>
+                    <label class="header-middle">BASIC EDUCATION DEGREE/COURSE</label>
+                    <label class="header-middle">PERIOD OF ATTENDANCE</label>
+                    <label class="header-middle">HIGHEST LEVEL/UNIT EARNED (IF NOT GRADUATE)</label>
+                    <label class="header-middle">YEAR GRADUATE</label>
+                    <label class="header-middle">SCHOLARSHIP/ACADEMIC HONORS</label>
+                </div>
+                <div class="group-inline group">
+                    <input class="border" type="text" name="level" id="level" placeholder="">
+                    <input type="text" name="level" id="level" placeholder="">
+                    <input type="text" name="schoolname" id="level" placeholder="">
+                    <input type="text" name="degree" id="level" placeholder="">
+                    <input type="text" name="attendace" id="level" placeholder="">
+                    <input type="text" name="highestlevel" id="level" placeholder="">
+                    <input type="text" name="acadhonors" id="level" placeholder="">
+                </div>
+                <div class="group-inline group">
+                    <input class="border" type="text" name="level" id="level" placeholder="">
+                    <input type="text" name="level" id="level" placeholder="">
+                    <input type="text" name="schoolname" id="level" placeholder="">
+                    <input type="text" name="degree" id="level" placeholder="">
+                    <input type="text" name="attendace" id="level" placeholder="">
+                    <input type="text" name="highestlevel" id="level" placeholder="">
+                    <input type="text" name="acadhonors" id="level" placeholder="">
+                </div>
+                <div class="group-inline group">
+                    <input class="border" type="text" name="level" id="level" placeholder="">
+                    <input type="text" name="level" id="level" placeholder="">
+                    <input type="text" name="schoolname" id="level" placeholder="">
+                    <input type="text" name="degree" id="level" placeholder="">
+                    <input type="text" name="attendace" id="level" placeholder="">
+                    <input type="text" name="highestlevel" id="level" placeholder="">
+                    <input type="text" name="acadhonors" id="level" placeholder="">
+                </div>
+            </div>
+            <!--WORK EXPERIENCE INFO INPUTS-->
+            <h1 class="header-span">IV. Work Experience</h1>
+            <div class="work-background wrapper-span-full flex">
+                <div class="group-inline header group span">
+                    <label class="header-middle">INCLUSIVE DATES</label>
+                    <label class="header-middle">POSITION TITLE</label>
+                    <label class="header-middle">COMPANY</label>
+                    <label class="header-middle">MONTHLY SALARY</label>
+                    <label class="header-middle">SALARY PAY GRADE</label>
+                    <label class="header-middle">STATUS OF APPOINTMENT</label>
+                    <label class="header-middle">GOVT SERVICE</label>
+                </div>
+                <div class="group-inline group">
+                    <input type="text" name="workdate" id="level" placeholder="">
+                    <input type="text" name="position" id="level" placeholder="">
+                    <input type="text" name="company" id="level" placeholder="">
+                    <input type="text" name="monthlysalary" id="level" placeholder="">
+                    <input type="text" name="paygrade" id="level" placeholder="">
+                    <input type="text" name="statusofappointment" id="level" placeholder="">
+                    <select name="goverment" id="goverment">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="group-inline group">
+                    <input type="text" name="workdate" id="level" placeholder="">
+                    <input type="text" name="position" id="level" placeholder="">
+                    <input type="text" name="company" id="level" placeholder="">
+                    <input type="text" name="monthlysalary" id="level" placeholder="">
+                    <input type="text" name="paygrade" id="level" placeholder="">
+                    <input type="text" name="statusofappointment" id="level" placeholder="">
+                    <select name="goverment" id="goverment">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="group-inline group">
+                    <input type="text" name="workdate" id="level" placeholder="">
+                    <input type="text" name="position" id="level" placeholder="">
+                    <input type="text" name="company" id="level" placeholder="">
+                    <input type="text" name="monthlysalary" id="level" placeholder="">
+                    <input type="text" name="paygrade" id="level" placeholder="">
+                    <input type="text" name="statusofappointment" id="level" placeholder="">
+                    <select name="goverment" id="goverment">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <!--WORK EXPERIENCE INFO INPUTS-->
+            <!--VOLUNTARY WORK INFO INPUTS-->
+            <h1 class="header-span">V. Voluntary Work Or Involvement In Civic / Non Government / Voluntary Organizations</h1>
+            <div class="voluntary-work wrapper-span-full flex">
+                <div class="odd-headers">
+                    <label class="header-middle">NAME AND ADDRESS OF ORGANIZATION</label>
+                    <label class="header-middle">INCLUSIVE DATES</label>
+                    <label class="header-middle">NUMBER OF HOURS</label>
+                    <label class="header-middle">TYPE OF ID</label>
+                    <label class="header-middle">POSITION / NATURE OF WORK</label>
+                </div>
+                <div class="odd-headers group">
+                    <input type="text" name="nameoforg" id="level" placeholder="">
+                    <input type="text" name="dates" id="level" placeholder="">
+                    <input type="text" name="hours" id="level" placeholder="">
+                    <input type="text" name="id" id="level" placeholder="">
+                    <input type="text" name="position" id="level" placeholder="">
+                </div>
+                <div class="odd-headers group">
+                    <input type="text" name="nameoforg" id="level" placeholder="">
+                    <input type="text" name="dates" id="level" placeholder="">
+                    <input type="text" name="hours" id="level" placeholder="">
+                    <input type="text" name="id" id="level" placeholder="">
+                    <input type="text" name="position" id="level" placeholder="">
+                </div>
+                <div class="odd-headers group">
+                    <input type="text" name="nameoforg" id="level" placeholder="">
+                    <input type="text" name="dates" id="level" placeholder="">
+                    <input type="text" name="hours" id="level" placeholder="">
+                    <input type="text" name="id" id="level" placeholder="">
+                    <input type="text" name="position" id="level" placeholder="">
+                </div>
+            </div>
+            <!--VOLUNTARY WORK INFO INPUTS-->
+            <!--LEARNING AND DEVELOPMENT (L&D) / INTERVENTIONS / TRAINING PROGRAMS ATTENDED-->
+            <h1 class="header-span">VI. Learning AND Development (L&D) / Interventions / Training Programs Attended</h1>
+            <div class="learning-development wrapper-span-full flex">
+                <div class="odd-headers">
+                    <label class="header-middle">TITLE OF L&D INTERVENTION OR TRAINING PROGRAMS</label>
+                    <label class="header-middle">INCLUSIVE DATES</label>
+                    <label class="header-middle">NUMBER OF HOURS</label>
+                    <label class="header-middle">TYPE OF ID</label>
+                    <label class="header-middle">CONDUCTED / SPONSORED BY (Write Full)</label>
+                </div>
+                <div class="odd-headers group">
+                    <input type="text" name="title" id="level" placeholder="">
+                    <input type="text" name="dates" id="level" placeholder="">
+                    <input type="text" name="hours" id="level" placeholder="">
+                    <input type="text" name="id" id="level" placeholder="">
+                    <input type="text" name="position" id="level" placeholder="">
+                </div>
+                <div class="odd-headers group">
+                    <input type="text" name="title" id="level" placeholder="">
+                    <input type="text" name="dates" id="level" placeholder="">
+                    <input type="text" name="hours" id="level" placeholder="">
+                    <input type="text" name="id" id="level" placeholder="">
+                    <input type="text" name="position" id="level" placeholder="">
+                </div>
+                <div class="odd-headers group">
+                    <input type="text" name="title" id="level" placeholder="">
+                    <input type="text" name="dates" id="level" placeholder="">
+                    <input type="text" name="hours" id="level" placeholder="">
+                    <input type="text" name="id" id="level" placeholder="">
+                    <input type="text" name="position" id="level" placeholder="">
+                </div>
+            </div>
+            <!--LEARNING AND DEVELOPMENT (L&D) / INTERVENTIONS / TRAINING PROGRAMS ATTENDED-->
+            <!--OTHER INFORMATION-->
+            <h1 class="header-span">VII. Other Information</h1>
+            <div class="other-information">
+                <div class="odd-headers-three">
+                    <label class="header-middle">SPECIAL SKILLS and HOBBIES</label>
+                    <label class="header-middle">NON ACADEMIC DISTINCTIONS / RECOGNITION (Write in full)</label>
+                    <label class="header-middle">MEMBERSHIP IN ASSOCIATION ORGANIZATION</label>
+                </div> 
+                <div class="odd-headers-three group">
+                    <input type="text" name="skills" id="level" placeholder="">
+                    <input type="text" name="academicdistictions" id="level" placeholder="">
+                    <input type="text" name="membership" id="level" placeholder="">
+                </div>
+                <div class="odd-headers-three group">
+                    <input type="text" name="skills" id="level" placeholder="">
+                    <input type="text" name="academicdistictions" id="level" placeholder="">
+                    <input type="text" name="membership" id="level" placeholder="">
+                </div>
+                <div class="odd-headers-three group">
+                    <input type="text" name="skills" id="level" placeholder="">
+                    <input type="text" name="academicdistictions" id="level" placeholder="">
+                    <input type="text" name="membership" id="level" placeholder="">
+                </div>
+                <div class="other-info-span">
+                    <div class="contact">
+                        <label class="group">CONTACT PERSON IN CASE OF EMERGENCY</label>
+                        <div class="group">
+                            <label class="label-width">A. FULL NAME</label>
+                            <input type="text" id="contactfullname" name="contactfullname" placeholder="Full Name">
+                        </div>
+                        <div class="group">
+                            <label class="label-width">B. RELATIONSHIP</label>
+                            <input type="text" id="contactrelationship" name="contactrelationship" placeholder="Relationship">
+                        </div>
+                        <div class="group">
+                            <label class="label-width">C. ADDRESS</label>
+                            <input type="text" id="contactaddress" name="contactaddress" placeholder="Contact Address">
+                        </div>
+                        <div class="group">
+                            <label class="label-width">D. NUMBER</label>
+                            <input type="text" id="contactnumber" name="contactnumber" placeholder="Contact Number">
+                        </div>
+                        <label class="group">REFERENCES</label>
+                        <div class="odd-headers-three">
+                            <label class="header-middle">NAME</label>
+                            <label class="header-middle">ADDRESS</label>
+                            <label class="header-middle">TEL NO</label>
+                        </div> 
+                        <div class="group-contact group">
+                            <input type="text" name="referencename" id="referencename" placeholder="">
+                            <input type="text" name="referenceaddress" id="referenceaddress" placeholder="">
+                            <input type="text" name="referencetel" id="referencetel" placeholder="">
+                        </div>
+                        <div class="group-contact group">
+                            <input type="text" name="referencename" id="referencename" placeholder="">
+                            <input type="text" name="referenceaddress" id="referenceaddress" placeholder="">
+                            <input type="text" name="referencetel" id="referencetel" placeholder="">
+                        </div>
+                        <div class="group-contact group">
+                            <input type="text" name="referencename" id="referencename" placeholder="">
+                            <input type="text" name="referenceaddress" id="referenceaddress" placeholder="">
+                            <input type="text" name="referencetel" id="referencetel" placeholder="">
+                        </div>
+                        <label class="group">35. I declare under oath that I have personally accomplished this Personal Data Sheet. I acknowledge and consent to the collection, use, and storage of my data by TCL Sun, Inc. in accordance with the RA 10173 Data Privacy Act of 2012 laws and regulations
+
+                            I agree that any misrepresentation made in this document and its attachments shall cause the filing of administrative/criminal case/s against me.</label>
+                    </div>
+                    <div class="picture-wrapper">
+                        <div class="picture">
+                            ID picture taken within
+                            the last 6 months
+                            3.5 cm. X 4.5 cm
+                            (passport size)
+
+                            With full and handwritten
+                            name tag and signature over
+                            printed name
+
+                            Computer generated
+                            or photocopied picture
+                            is not acceptable
+                        </div>
+                    </div>
+                </div>
+                <div class="oath">
+                    <h3>SUBSCRIBED AND SWORN to before me this ________________________, affiant exhibiting his/her validity issued goverment id as indicated above</h3>
+                    <input type="text" readonly>
+                    <input type="text" placeholder="Person Administering Oath" readonly>
+                </div>
+            </div>
+            <!--OTHER INFORMATION-->
         </form>
     </main>
 </body>
