@@ -252,6 +252,32 @@
             text-align: center;
             background-color: #efefef;
         }
+
+        .final-btn{
+            margin: 10px 0px 0px 0px;
+            width: 100%;
+        }
+
+        .final-btn:hover{
+            cursor: pointer;
+            background: red;
+            color:white
+        }
+
+        .shrink{
+            width: 100px;
+            position: absolute;
+            top: 10px;
+            left: 10px
+        }
+
+        .shrink:hover{
+            cursor: pointer;
+            background: red;
+            color:white
+        }
+
+        
         /*CSS INHERIT PROPERTIES*/
 
         main{
@@ -303,11 +329,16 @@
                 border-top: 1px solid black;
                 margin-top: 300px;
             }
+            
+            button{
+                display: none;
+            }
         }
 
     </style>
 </head>
 <body>
+    <button class="shrink" type="button" id="back">Back</button>
     <main class="flex">
         <form method="POST" class="form-wrapper">
             <div class="header-title"> 
@@ -729,7 +760,13 @@
                 </div>
             </div>
             <!--OTHER INFORMATION-->
+            <button class="final-btn" type="button" id="submit">Finalize Form</button>
         </form>
     </main>
+    <script>
+        document.getElementById('back').addEventListener("click", () => {
+            window.location.href = "tcl.php";
+        });
+    </script>
 </body>
 </html>
