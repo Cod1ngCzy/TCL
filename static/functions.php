@@ -1,5 +1,5 @@
 <?php
-include("./static/connection.php");
+include("connection.php");
 
 function get_applicant($sql_connection, $query_id){
     $query = "SELECT * FROM applicant WHERE user_id = '$query_id' limit 1";

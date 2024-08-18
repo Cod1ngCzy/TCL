@@ -1,3 +1,8 @@
+<?php
+  include("./static/connection.php");
+  include("./static/functions.php");
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +87,7 @@
         });
 
         document.getElementById('applicant').addEventListener("click", () => {
-            window.location.href ="/Test/apply.php";
+            window.location.href ="/Test/form.php";
         })
 
         

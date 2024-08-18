@@ -9,7 +9,6 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-size: 8px;
         }
         /*CSS INHERIT PROPERTIES*/
         .flex{
@@ -48,7 +47,7 @@
         }
 
         .group label{
-            font-size: 10px;
+            font-size: 12px;
             width: 20%;
             background-color: #efefef;
             padding: 5px 0px 2px 5px;
@@ -218,10 +217,10 @@
         }
 
         .picture{
-            width: 150px;
-            height: 150px;
+            width: 4.5cm;
+            height: 4.5cm;
             border: 1px solid black;
-            font-size: 1em;
+            font-size: .8em;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -288,7 +287,7 @@
         }
 
         .form-wrapper{
-            width: 800px;
+            width: 1000px;
             height: 800px;
             min-width: none;
         }
@@ -341,7 +340,7 @@
 <body>
     <button class="shrink" type="button" id="back">Back</button>
     <main class="flex">
-        <form method="POST" class="form-wrapper">
+        <form method="POST" action="/Test/static/form_validate.php" class="form-wrapper">
             <div class="header-title"> 
                 <label>
                     <img src="./assets/tcl-logo.svg" alt="tcl logo"> 
@@ -527,49 +526,49 @@
                     <label class="header-middle">SCHOLARSHIP/ACADEMIC HONORS</label>
                 </div>
                 <div class="group-inline group" id="elementary">
-                    <input class="border" type="text" name="elementary" value="ELEMENTARY" readonly style="background-color: #efefef;">
-                    <input type="text" name="schoolname" id="level" placeholder="">
-                    <input type="text" name="degree" id="level" placeholder="">
-                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
-                    <input type="text" name="highestlevel" id="level" placeholder="">
-                    <input type="text" name="yeargraduate" id="level" placeholder="">
-                    <input type="text" name="acadhonors" id="level" placeholder="">
+                    <input class="border" type="text" value="ELEMENTARY" readonly style="background-color: #efefef;">
+                    <input type="text" name="Eschoolname" id="level" placeholder="">
+                    <input type="text" name="Edegree" id="level" placeholder="">
+                    <input type="text" name="Eattendace" id="level" placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="Ehighestlevel" id="level" placeholder="">
+                    <input type="text" name="Eyeargraduate" id="level" placeholder="">
+                    <input type="text" name="Eacadhonors" id="level" placeholder="">
                 </div>
                 <div class="group-inline group" id="secondary">
-                    <input class="border" type="text" name="level" style="background-color: #efefef;" value="SECONDARY" readonly>
-                    <input type="text" name="schoolname" id="level" placeholder="">
-                    <input type="text" name="degree" id="level" placeholder="">
-                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
-                    <input type="text" name="highestlevel" id="level" placeholder="">
-                    <input type="text" name="yeargraduate" id="level" placeholder="">
-                    <input type="text" name="acadhonors" id="level" placeholder="">
+                    <input class="border" type="text" style="background-color: #efefef;" value="SECONDARY" readonly>
+                    <input type="text" name="Sschoolname" id="level" placeholder="">
+                    <input type="text" name="Sdegree" id="level" placeholder="">
+                    <input type="text" name="Sattendace" id="level" placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="Shighestlevel" id="level" placeholder="">
+                    <input type="text" name="Syeargraduate" id="level" placeholder="">
+                    <input type="text" name="Sacadhonors" id="level" placeholder="">
                 </div>
                 <div class="group-inline group" id="vocational">
-                    <input class="border" type="text" name="level" style="background-color: #efefef;" value="VOCATIONAL/TRADE" readonly>
-                    <input type="text" name="schoolname" id="level" placeholder="">
-                    <input type="text" name="degree" id="level" placeholder="">
-                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
-                    <input type="text" name="highestlevel" id="level" placeholder="">
-                    <input type="text" name="yeargraduate" id="level" placeholder="">
-                    <input type="text" name="acadhonors" id="level" placeholder="">
+                    <input class="border" type="text" style="background-color: #efefef;" value="VOCATIONAL/TRADE" readonly>
+                    <input type="text" name="Vschoolname" id="level" placeholder="">
+                    <input type="text" name="Vdegree" id="level" placeholder="">
+                    <input type="text" name="Vattendace" id="level" placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="Vhighestlevel" id="level" placeholder="">
+                    <input type="text" name="Vyeargraduate" id="level" placeholder="">
+                    <input type="text" name="Vacadhonors" id="level" placeholder="">
                 </div>
                 <div class="group-inline group" id="college">
-                    <input class="border" type="text" name="level" style="background-color: #efefef;" value="COLLEGE" readonly>
-                    <input type="text" name="schoolname" id="level" placeholder="">
-                    <input type="text" name="degree" id="level" placeholder="">
-                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
-                    <input type="text" name="highestlevel" id="level" placeholder="">
-                    <input type="text" name="yeargraduate" id="level" placeholder="">
-                    <input type="text" name="acadhonors" id="level" placeholder="">
+                    <input class="border" type="text" style="background-color: #efefef;" value="COLLEGE" readonly>
+                    <input type="text" name="Cschoolname" id="level" placeholder="">
+                    <input type="text" name="Cdegree" id="level" placeholder="">
+                    <input type="text" name="Cattendace" id="level" placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="Chighestlevel" id="level" placeholder="">
+                    <input type="text" name="Cyeargraduate" id="level" placeholder="">
+                    <input type="text" name="Cacadhonors" id="level" placeholder="">
                 </div>
                 <div class="group-inline group" id="gradute-studies">
-                    <input class="border" type="text" name="level" style="background-color: #efefef;" value="GRADUATE STUDIES" readonly>
-                    <input type="text" name="schoolname" id="level" placeholder="">
-                    <input type="text" name="degree" id="level" placeholder="">
-                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
-                    <input type="text" name="highestlevel" id="level" placeholder="">
-                    <input type="text" name="yeargraduate" id="level" placeholder="">
-                    <input type="text" name="acadhonors" id="level" placeholder="">
+                    <input class="border" type="text" style="background-color: #efefef;" value="GRADUATE STUDIES" readonly>
+                    <input type="text" name="Gschoolname" id="level" placeholder="">
+                    <input type="text" name="Gdegree" id="level" placeholder="">
+                    <input type="text" name="Gattendace" id="level" placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="Ghighestlevel" id="level" placeholder="">
+                    <input type="text" name="Gyeargraduate" id="level" placeholder="">
+                    <input type="text" name="Gacadhonors" id="level" placeholder="">
                 </div>
             </div>
             <!--WORK EXPERIENCE INFO INPUTS-->
@@ -585,37 +584,37 @@
                     <label class="header-middle">GOVT SERVICE</label>
                 </div>
                 <div class="group-inline group">
-                    <input type="text" name="workdate" id="level" placeholder="">
-                    <input type="text" name="position" id="level" placeholder="">
-                    <input type="text" name="company" id="level" placeholder="">
-                    <input type="text" name="monthlysalary" id="level" placeholder="">
-                    <input type="text" name="paygrade" id="level" placeholder="">
-                    <input type="text" name="statusofappointment" id="level" placeholder="">
-                    <select name="goverment" id="goverment">
+                    <input type="text" name="Fworkdate" id="level"  placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="Fposition" id="level" placeholder="">
+                    <input type="text" name="Fcompany" id="level" placeholder="">
+                    <input type="text" name="Fmonthlysalary" id="level" placeholder="">
+                    <input type="text" name="Fpaygrade" id="level" placeholder="">
+                    <input type="text" name="Fstatusofappointment" id="level" placeholder="">
+                    <select name="Fgoverment" id="goverment">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
                 </div>
                 <div class="group-inline group">
-                    <input type="text" name="workdate" id="level" placeholder="">
-                    <input type="text" name="position" id="level" placeholder="">
-                    <input type="text" name="company" id="level" placeholder="">
-                    <input type="text" name="monthlysalary" id="level" placeholder="">
-                    <input type="text" name="paygrade" id="level" placeholder="">
-                    <input type="text" name="statusofappointment" id="level" placeholder="">
-                    <select name="goverment" id="goverment">
+                    <input type="text" name="Sworkdate" id="level" placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="Sposition" id="level" placeholder="">
+                    <input type="text" name="Scompany" id="level" placeholder="">
+                    <input type="text" name="Smonthlysalary" id="level" placeholder="">
+                    <input type="text" name="Spaygrade" id="level" placeholder="">
+                    <input type="text" name="Sstatusofappointment" id="level" placeholder="">
+                    <select name="Sgoverment" id="goverment">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
                 </div>
                 <div class="group-inline group">
-                    <input type="text" name="workdate" id="level" placeholder="">
-                    <input type="text" name="position" id="level" placeholder="">
-                    <input type="text" name="company" id="level" placeholder="">
-                    <input type="text" name="monthlysalary" id="level" placeholder="">
-                    <input type="text" name="paygrade" id="level" placeholder="">
-                    <input type="text" name="statusofappointment" id="level" placeholder="">
-                    <select name="goverment" id="goverment">
+                    <input type="text" name="Tworkdate" id="level" placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="Tposition" id="level" placeholder="">
+                    <input type="text" name="Tcompany" id="level" placeholder="">
+                    <input type="text" name="Tmonthlysalary" id="level" placeholder="">
+                    <input type="text" name="Tpaygrade" id="level" placeholder="">
+                    <input type="text" name="Tstatusofappointment" id="level" placeholder="">
+                    <select name="Tgoverment" id="goverment">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
@@ -633,25 +632,25 @@
                     <label class="header-middle">POSITION / NATURE OF WORK</label>
                 </div>
                 <div class="odd-headers group">
-                    <input type="text" name="nameoforg" id="level" placeholder="">
-                    <input type="text" name="dates" id="level" placeholder="">
-                    <input type="text" name="hours" id="level" placeholder="">
-                    <input type="text" name="id" id="level" placeholder="">
-                    <input type="text" name="position" id="level" placeholder="">
+                    <input type="text" name="Fnameoforg" id="level" placeholder="">
+                    <input type="text" name="Fdates" id="level" placeholder="From - To ">
+                    <input type="text" name="Fhours" id="level" placeholder="">
+                    <input type="text" name="Fid" id="level" placeholder="">
+                    <input type="text" name="Fposition" id="level" placeholder="">
                 </div>
                 <div class="odd-headers group">
-                    <input type="text" name="nameoforg" id="level" placeholder="">
-                    <input type="text" name="dates" id="level" placeholder="">
-                    <input type="text" name="hours" id="level" placeholder="">
-                    <input type="text" name="id" id="level" placeholder="">
-                    <input type="text" name="position" id="level" placeholder="">
+                    <input type="text" name="Snameoforg" id="level" placeholder="">
+                    <input type="text" name="Sdates" id="level" placeholder="From - To ">
+                    <input type="text" name="Shours" id="level" placeholder="">
+                    <input type="text" name="Sid" id="level" placeholder="">
+                    <input type="text" name="Sposition" id="level" placeholder="">
                 </div>
                 <div class="odd-headers group">
-                    <input type="text" name="nameoforg" id="level" placeholder="">
-                    <input type="text" name="dates" id="level" placeholder="">
-                    <input type="text" name="hours" id="level" placeholder="">
-                    <input type="text" name="id" id="level" placeholder="">
-                    <input type="text" name="position" id="level" placeholder="">
+                    <input type="text" name="Tnameoforg" id="level" placeholder="">
+                    <input type="text" name="Tdates" id="level" placeholder="From - To">
+                    <input type="text" name="Thours" id="level" placeholder="">
+                    <input type="text" name="Tid" id="level" placeholder="">
+                    <input type="text" name="Tposition" id="level" placeholder="">
                 </div>
             </div>
             <!--VOLUNTARY WORK INFO INPUTS-->
@@ -666,25 +665,25 @@
                     <label class="header-middle">CONDUCTED / SPONSORED BY (Write Full)</label>
                 </div>
                 <div class="odd-headers group">
-                    <input type="text" name="title" id="level">
-                    <input type="text" name="dates" id="level" placeholder="">
-                    <input type="text" name="hours" id="level" placeholder="">
-                    <input type="text" name="id" id="level" placeholder="">
-                    <input type="text" name="position" id="level" placeholder="">
+                    <input type="text" name="Ftitle" id="level">
+                    <input type="text" name="Fdates" id="level" placeholder="">
+                    <input type="text" name="Fhours" id="level" placeholder="">
+                    <input type="text" name="Fid" id="level" placeholder="">
+                    <input type="text" name="Fposition" id="level" placeholder="">
                 </div>
                 <div class="odd-headers group">
-                    <input type="text" name="title" id="level" placeholder="">
-                    <input type="text" name="dates" id="level" placeholder="">
-                    <input type="text" name="hours" id="level" placeholder="">
-                    <input type="text" name="id" id="level" placeholder="">
-                    <input type="text" name="position" id="level" placeholder="">
+                    <input type="text" name="Stitle" id="level" placeholder="">
+                    <input type="text" name="Sdates" id="level" placeholder="">
+                    <input type="text" name="Shours" id="level" placeholder="">
+                    <input type="text" name="Sid" id="level" placeholder="">
+                    <input type="text" name="Sposition" id="level" placeholder="">
                 </div>
                 <div class="odd-headers group">
-                    <input type="text" name="title" id="level" placeholder="">
-                    <input type="text" name="dates" id="level" placeholder="">
-                    <input type="text" name="hours" id="level" placeholder="">
-                    <input type="text" name="id" id="level" placeholder="">
-                    <input type="text" name="position" id="level" placeholder="">
+                    <input type="text" name="Ttitle" id="level" placeholder="">
+                    <input type="text" name="Tdates" id="level" placeholder="">
+                    <input type="text" name="Thours" id="level" placeholder="">
+                    <input type="text" name="Tid" id="level" placeholder="">
+                    <input type="text" name="Tposition" id="level" placeholder="">
                 </div>
             </div>
             <!--LEARNING AND DEVELOPMENT (L&D) / INTERVENTIONS / TRAINING PROGRAMS ATTENDED-->
@@ -697,19 +696,19 @@
                     <label class="header-middle">MEMBERSHIP IN ASSOCIATION ORGANIZATION</label>
                 </div> 
                 <div class="odd-headers-three group">
-                    <input type="text" name="skills" id="level" placeholder="">
-                    <input type="text" name="academicdistictions" id="level" placeholder="">
-                    <input type="text" name="membership" id="level" placeholder="">
+                    <input type="text" name="Fskills" id="level" placeholder="">
+                    <input type="text" name="Facademicdistictions" id="level" placeholder="">
+                    <input type="text" name="Fmembership" id="level" placeholder="">
                 </div>
                 <div class="odd-headers-three group">
-                    <input type="text" name="skills" id="level" placeholder="">
-                    <input type="text" name="academicdistictions" id="level" placeholder="">
-                    <input type="text" name="membership" id="level" placeholder="">
+                    <input type="text" name="Sskills" id="level" placeholder="">
+                    <input type="text" name="Sacademicdistictions" id="level" placeholder="">
+                    <input type="text" name="Smembership" id="level" placeholder="">
                 </div>
                 <div class="odd-headers-three group">
-                    <input type="text" name="skills" id="level" placeholder="">
-                    <input type="text" name="academicdistictions" id="level" placeholder="">
-                    <input type="text" name="membership" id="level" placeholder="">
+                    <input type="text" name="Tskills" id="level" placeholder="">
+                    <input type="text" name="Tacademicdistictions" id="level" placeholder="">
+                    <input type="text" name="Tmembership" id="level" placeholder="">
                 </div>
                 <div class="other-info-span">
                     <div class="contact">
@@ -737,19 +736,19 @@
                             <label class="header-middle">TEL NO</label>
                         </div> 
                         <div class="group-contact group">
-                            <input type="text" name="referencename" id="referencename" placeholder="">
-                            <input type="text" name="referenceaddress" id="referenceaddress" placeholder="">
-                            <input type="text" name="referencetel" id="referencetel" placeholder="">
+                            <input type="text" name="Freferencename" id="referencename" placeholder="">
+                            <input type="text" name="Freferenceaddress" id="referenceaddress" placeholder="">
+                            <input type="text" name="Freferencetel" id="referencetel" placeholder="">
                         </div>
                         <div class="group-contact group">
-                            <input type="text" name="referencename" id="referencename" placeholder="">
-                            <input type="text" name="referenceaddress" id="referenceaddress" placeholder="">
-                            <input type="text" name="referencetel" id="referencetel" placeholder="">
+                            <input type="text" name="Sreferencename" id="referencename" placeholder="">
+                            <input type="text" name="Sreferenceaddress" id="referenceaddress" placeholder="">
+                            <input type="text" name="Sreferencetel" id="referencetel" placeholder="">
                         </div>
                         <div class="group-contact group">
-                            <input type="text" name="referencename" id="referencename" placeholder="">
-                            <input type="text" name="referenceaddress" id="referenceaddress" placeholder="">
-                            <input type="text" name="referencetel" id="referencetel" placeholder="">
+                            <input type="text" name="Treferencename" id="referencename" placeholder="">
+                            <input type="text" name="Treferenceaddress" id="referenceaddress" placeholder="">
+                            <input type="text" name="Treferencetel" id="referencetel" placeholder="">
                         </div>
                         <label class="group">35. I declare under oath that I have personally accomplished this Personal Data Sheet. I acknowledge and consent to the collection, use, and storage of my data by TCL Sun, Inc. in accordance with the RA 10173 Data Privacy Act of 2012 laws and regulations
 
@@ -779,7 +778,7 @@
                 </div>
             </div>
             <!--OTHER INFORMATION-->
-            <button class="final-btn" type="button" id="submit">Finalize Form</button>
+            <button class="final-btn" type="submit" id="submit">Finalize Form</button>
         </form>
     </main>
     <script>

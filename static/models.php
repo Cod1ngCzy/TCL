@@ -1,5 +1,5 @@
 <?php
-require("./static/connection.php");
+require("connection.php");
 // Create Database
 
 // Define tables and columns
@@ -70,7 +70,7 @@ $tables = [
         "secondary_yeargraduated VARCHAR(255)",
         "secondary_honors VARCHAR(255)",
         "vocational_name VARCHAR(255)",
-        "vocational_degree VARCHAR(255)"
+        "vocational_degree VARCHAR(255)",
         "vocational_attendance VARCHAR(255)",
         "vocational_levelearned VARCHAR(255)",
         "vocational_yeargraduated VARCHAR(255)",
@@ -90,21 +90,21 @@ $tables = [
     "work_background" => [
         "id INT(10) NOT NULL AUTO_INCREMENT",
         "user_id VARCHAR(255)",
-        "Fdates VARCHAR(255)"
+        "Fdates VARCHAR(255)",
         "Fposition_title VARCHAR(255)",
         "Fdepartment VARCHAR(255)",
         "Fmonthly_salary DECIMAL(10,2)",
         "Fpay_grade VARCHAR(255)",
         "Fstatus_of_appointment VARCHAR(255)",
         "Fgovt_service VARCHAR(255)",
-        "Sdates VARCHAR(255)"
+        "Sdates VARCHAR(255)",
         "Sposition_title VARCHAR(255)",
         "Sdepartment VARCHAR(255)",
         "Smonthly_salary DECIMAL(10,2)",
         "Spay_grade VARCHAR(255)",
         "Sstatus_of_appointment VARCHAR(255)",
         "Sgovt_service VARCHAR(255)",
-        "Tdates VARCHAR(255)"
+        "Tdates VARCHAR(255)",
         "Tposition_title VARCHAR(255)",
         "Tdepartment VARCHAR(255)",
         "Tmonthly_salary DECIMAL(10,2)",
@@ -117,22 +117,42 @@ $tables = [
     "voluntary_work" => [
         "id INT(10) NOT NULL AUTO_INCREMENT",
         "user_id VARCHAR(255)",
-        "org_name VARCHAR(255)",
-        "dates VARCHAR(255)",
-        "num_hours INT",
-        "position VARCHAR(255)",
+        "Forg_name VARCHAR(255)",
+        "Fdates VARCHAR(255)",
+        "Fhours VARCHAR(255)",
+        "Fid_type VARCHAR(255)",
+        "Fposition VARCHAR(255)",
+        "Sorg_name VARCHAR(255)",
+        "Sdates VARCHAR(255)",
+        "Shours VARCHAR(255)",
+        "Sid_type VARCHAR(255)",
+        "Sposition VARCHAR(255)",
+        "Torg_name VARCHAR(255)",
+        "Tdates VARCHAR(255)",
+        "Thours VARCHAR(255)",
+        "Tid_type VARCHAR(255)",
+        "Tposition VARCHAR(255)",
         "PRIMARY KEY (id)",
         "FOREIGN KEY (user_id) REFERENCES applicant (user_id) ON DELETE SET NULL"
     ],
     "learning_and_development" => [
         "id INT(10) NOT NULL AUTO_INCREMENT",
         "user_id VARCHAR(255)",
-        "training_program VARCHAR(255)",
-        "training_from DATE",
-        "training_to DATE",
-        "training_hours INT",
-        "type_of_ld VARCHAR(255)",
-        "conducted_sponsored_by VARCHAR(255)",
+        "Ftraining_program VARCHAR(255)",
+        "Ftraining_dates VARCHAR(255)",
+        "Ftraining_hours VARCHAR(255)",
+        "Fid_type VARCHAR(255)",
+        "Fconducted_sponsored_by VARCHAR(255)",
+        "Straining_program VARCHAR(255)",
+        "Straining_dates VARCHAR(255)",
+        "Straining_hours VARCHAR(255)",
+        "Sid_type VARCHAR(255)",
+        "Sconducted_sponsored_by VARCHAR(255)",
+        "Ttraining_program VARCHAR(255)",
+        "Ttraining_dates VARCHAR(255)",
+        "Ttraining_hours VARCHAR(255)",
+        "Tid_type VARCHAR(255)",
+        "Tconducted_sponsored_by VARCHAR(255)",
         "PRIMARY KEY (id)",
         "FOREIGN KEY (user_id) REFERENCES applicant (user_id) ON DELETE SET NULL"
     ],
@@ -142,6 +162,19 @@ $tables = [
         "special_skills VARCHAR(255)",
         "non_academic_distinctions VARCHAR(255)",
         "membership_in_association VARCHAR(255)",
+        "contact_person VARCHAR(255)",
+        "contact_relationship VARCHAR(255)",
+        "contact_address VARCHAR(255)",
+        "contact_number VARCHAR(255)",
+        "reference1 VARCHAR(255)",
+        "reference1_add VARCHAR(255)",
+        "reference1_tel VARCHAR(255)",
+        "reference2 VARCHAR(255)",
+        "reference2_add VARCHAR(255)",
+        "reference2_tel VARCHAR(255)",
+        "reference3 VARCHAR(255)",
+        "reference3_add VARCHAR(255)",
+        "reference3_tel VARCHAR(255)",
         "PRIMARY KEY (id)",
         "FOREIGN KEY (user_id) REFERENCES applicant (user_id) ON DELETE SET NULL"
     ]

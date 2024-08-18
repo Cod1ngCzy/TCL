@@ -1,5 +1,5 @@
 <?php
- include_once("./static/models.php");
+ include_once("models.php");
 
  // This is where the connection initializes
  $dbhost = 'localhost';
