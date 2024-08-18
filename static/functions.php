@@ -61,4 +61,19 @@ class FlashMessage{
     }
 }
 
+function insert_to_database($table_name,$table,$sql_connection){
+
+    $columns = implode(", ", array_keys($table));
+    $values = "'" . implode("', '", array_values($table)) . "'";
+    
+    $query = "INSERT INTO $table_name ($columns) VALUES ($values)";
+
+    if(!mysqli_query($sql_connection, $query)){
+        throw new Exception('Error Inserting to Database');
+        return false;
+    } else{
+        return true;
+    }
+}
+
 ?>

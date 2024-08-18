@@ -1,7 +1,6 @@
 <?php
   include("./static/connection.php");
   include("./static/functions.php");
-  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +91,7 @@
 
         
         document.getElementById('admin').addEventListener("click", () => {
-            window.location.href ="/Test/dashlog.php";
+            window.location.href = "/Test/dashlog.php";
         })
 
 

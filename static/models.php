@@ -5,7 +5,7 @@ require("connection.php");
 // Define tables and columns
 $tables = [
     "applicant" => [
-        "id INT(10) NOT NULL AUTO_INCREMENT",
+        "id BIGINT(10) NOT NULL AUTO_INCREMENT",
         "user_id VARCHAR(255) UNIQUE",
         "status BOOLEAN",
         "PRIMARY KEY (id)"
@@ -19,11 +19,11 @@ $tables = [
         "dob DATE",
         "place_of_birth VARCHAR(255)",
         "citizenship VARCHAR(255)",
-        "sex ENUM('male', 'female')",
-        "civil_status ENUM('single', 'married', 'widowed', 'separated', 'others')",
+        "sex VARCHAR(255)",
+        "civil_status VARCHAR(255)",
         "height DECIMAL(5,2)",
         "weight DECIMAL(5,2)",
-        "blood_type ENUM('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-')",
+        "blood_type VARCHAR(255)",
         "driver_license VARCHAR(255)",
         "pag_ibig VARCHAR(255)",
         "phil_health VARCHAR(255)",
@@ -33,8 +33,8 @@ $tables = [
         "phone_number VARCHAR(255)",
         "telephone VARCHAR(255)",
         "email VARCHAR(255)",
-        "res_address TEXT",
-        "perm_address TEXT",
+        "res_address VARCHAR(255)",
+        "perm_address VARCHAR(255)",
         "PRIMARY KEY (id)",
         "FOREIGN KEY (user_id) REFERENCES applicant (user_id) ON DELETE SET NULL"
     ],
@@ -74,16 +74,19 @@ $tables = [
         "vocational_attendance VARCHAR(255)",
         "vocational_levelearned VARCHAR(255)",
         "vocational_yeargraduated VARCHAR(255)",
+        "vocational_honors VARCHAR(255)",
         "college_name VARCHAR(255)",
-        "college_year_graduated INT",
-        "college_period_attendance VARCHAR(255)",
-        "college_highest_level_earned VARCHAR(255)",
-        "college_year_graduated_again INT",
+        "college_degree VARCHAR(255)",
+        "college_attendance VARCHAR(255)",
+        "college_levelearned VARCHAR(255)",
+        "college_yeargraduated VARCHAR(255)",
+        "college_honors VARCHAR(255)",
         "graduate_studies_name VARCHAR(255)",
         "graduate_studies_degree VARCHAR(255)",
         "graduate_studies_attendance VARCHAR(255)",
         "graduate_studies_levelearned VARCHAR(255)",
         "graduate_studies_yeargraduated VARCHAR(255)",
+        "graduate_studies_honors VARCHAR(255)",
         "PRIMARY KEY (id)",
         "FOREIGN KEY (user_id) REFERENCES applicant (user_id) ON DELETE SET NULL"
     ],
@@ -162,6 +165,12 @@ $tables = [
         "special_skills VARCHAR(255)",
         "non_academic_distinctions VARCHAR(255)",
         "membership_in_association VARCHAR(255)",
+        "special_skills_2 VARCHAR(255)",
+        "non_academic_distinctions_2 VARCHAR(255)",
+        "membership_in_association_2 VARCHAR(255)",
+        "special_skills_3 VARCHAR(255)",
+        "non_academic_distinctions_3 VARCHAR(255)",
+        "membership_in_association_3 VARCHAR(255)",
         "contact_person VARCHAR(255)",
         "contact_relationship VARCHAR(255)",
         "contact_address VARCHAR(255)",
@@ -197,6 +206,7 @@ function check_table($sql_connection, $table) {
     
     return mysqli_num_rows($check_result) > 0;
 }
+
 
 foreach ($tables as $table => $columns) {
     if (check_table($sql_connection, $table)) {

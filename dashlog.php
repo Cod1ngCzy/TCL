@@ -197,7 +197,7 @@
             }
         });
 
-        document.addEventListener("click", () => {
+        document.getElementById("home").addEventListener("click", () => {
             window.location.href = "/Test/tcl.php";
         });
     </script>
