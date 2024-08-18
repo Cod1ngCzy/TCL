@@ -9,6 +9,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-size: 8px;
         }
         /*CSS INHERIT PROPERTIES*/
         .flex{
@@ -62,7 +63,7 @@
         .group input[type="email"],
         select,
         textarea{
-            font-size: 10px;
+            font-size: 8px;
             width: 80%;
             border: none;
             padding: 0px 0px 0px 6px;
@@ -220,7 +221,7 @@
             width: 150px;
             height: 150px;
             border: 1px solid black;
-            font-size: .5em;
+            font-size: 1em;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -349,7 +350,7 @@
             </div>
             <!--PERSONAL INFO INPUTS-->
             <h1 class="header-span">I. Personal Information</h1>
-            <div class="personal-info wrapper-span-full flex" id="Personal_Information">
+            <div class="personal-info wrapper-span-full flex">
                 <div class="group">
                     <label for="surname">Surname</label>
                     <input type="text" id="surname" name="surname" placeholder="Surname">
@@ -390,7 +391,7 @@
                 
                 <div class="group">
                     <label for="civil-status">Civil Status</label>
-                    <select id="civilstatus" name="civilstatus">
+                    <select id="civil-status" name="civilstatus">
                         <option value="" disabled selected>Select Civil Status</option>
                         <option value="single">Single</option>
                         <option value="married">Married</option>
@@ -411,8 +412,8 @@
                 </div>
                 
                 <div class="group">
-                    <label for="bloodtype">Blood Type</label>
-                    <select id="bloodtype" name="bloodtype">
+                    <label for="blood-type">Blood Type</label>
+                    <select id="blood-type" name="bloodtype">
                         <option value="" disabled selected>Select Blood Type</option>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option>
@@ -483,7 +484,7 @@
             <!--PERSONAL INFO INPUTS-->
             <!--FAMILY INFO INPUTS-->
             <h1 class="header-span">II. Family Background</h1>
-            <div class="family-background  wrapper-span-full flex " id="Family_Information"> 
+            <div class="family-background  wrapper-span-full flex">
                 <div class="span no-border group">
                     <label for="spouse">Spouse's Information</label>
                     <div class="column">
@@ -515,7 +516,7 @@
             <!--FAMILY INFO INPUTS-->
             <!--EDUCATIONAL INFO INPUTS-->
             <h1 class="header-span">III. Educational Background</h1>
-            <div class="educational-background wrapper-span-full flex" id="Educational_Information">
+            <div class="educational-background wrapper-span-full flex">
                 <div class="group-inline header group span ">
                     <label class="header-middle">LEVEL</label>
                     <label class="header-middle">NAME OF SCHOOL</label>
@@ -525,37 +526,55 @@
                     <label class="header-middle">YEAR GRADUATE</label>
                     <label class="header-middle">SCHOLARSHIP/ACADEMIC HONORS</label>
                 </div>
-                <div class="group-inline group">
-                    <input class="border" type="text" name="level" id="level" placeholder="">
-                    <input type="text" name="level" id="level" placeholder="">
+                <div class="group-inline group" id="elementary">
+                    <input class="border" type="text" name="elementary" value="ELEMENTARY" readonly style="background-color: #efefef;">
                     <input type="text" name="schoolname" id="level" placeholder="">
                     <input type="text" name="degree" id="level" placeholder="">
-                    <input type="text" name="attendace" id="level" placeholder="">
+                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
                     <input type="text" name="highestlevel" id="level" placeholder="">
+                    <input type="text" name="yeargraduate" id="level" placeholder="">
                     <input type="text" name="acadhonors" id="level" placeholder="">
                 </div>
-                <div class="group-inline group">
-                    <input class="border" type="text" name="level" id="level" placeholder="">
-                    <input type="text" name="level" id="level" placeholder="">
+                <div class="group-inline group" id="secondary">
+                    <input class="border" type="text" name="level" style="background-color: #efefef;" value="SECONDARY" readonly>
                     <input type="text" name="schoolname" id="level" placeholder="">
                     <input type="text" name="degree" id="level" placeholder="">
-                    <input type="text" name="attendace" id="level" placeholder="">
+                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
                     <input type="text" name="highestlevel" id="level" placeholder="">
+                    <input type="text" name="yeargraduate" id="level" placeholder="">
                     <input type="text" name="acadhonors" id="level" placeholder="">
                 </div>
-                <div class="group-inline group">
-                    <input class="border" type="text" name="level" id="level" placeholder="">
-                    <input type="text" name="level" id="level" placeholder="">
+                <div class="group-inline group" id="vocational">
+                    <input class="border" type="text" name="level" style="background-color: #efefef;" value="VOCATIONAL/TRADE" readonly>
                     <input type="text" name="schoolname" id="level" placeholder="">
                     <input type="text" name="degree" id="level" placeholder="">
-                    <input type="text" name="attendace" id="level" placeholder="">
+                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
                     <input type="text" name="highestlevel" id="level" placeholder="">
+                    <input type="text" name="yeargraduate" id="level" placeholder="">
+                    <input type="text" name="acadhonors" id="level" placeholder="">
+                </div>
+                <div class="group-inline group" id="college">
+                    <input class="border" type="text" name="level" style="background-color: #efefef;" value="COLLEGE" readonly>
+                    <input type="text" name="schoolname" id="level" placeholder="">
+                    <input type="text" name="degree" id="level" placeholder="">
+                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="highestlevel" id="level" placeholder="">
+                    <input type="text" name="yeargraduate" id="level" placeholder="">
+                    <input type="text" name="acadhonors" id="level" placeholder="">
+                </div>
+                <div class="group-inline group" id="gradute-studies">
+                    <input class="border" type="text" name="level" style="background-color: #efefef;" value="GRADUATE STUDIES" readonly>
+                    <input type="text" name="schoolname" id="level" placeholder="">
+                    <input type="text" name="degree" id="level" placeholder="">
+                    <input type="text" name="attendace" id="level" placeholder="From - To | Ex. 2020-2021">
+                    <input type="text" name="highestlevel" id="level" placeholder="">
+                    <input type="text" name="yeargraduate" id="level" placeholder="">
                     <input type="text" name="acadhonors" id="level" placeholder="">
                 </div>
             </div>
             <!--WORK EXPERIENCE INFO INPUTS-->
             <h1 class="header-span">IV. Work Experience</h1>
-            <div class="work-background wrapper-span-full flex" id="Work_Information">
+            <div class="work-background wrapper-span-full flex">
                 <div class="group-inline header group span">
                     <label class="header-middle">INCLUSIVE DATES</label>
                     <label class="header-middle">POSITION TITLE</label>
@@ -605,7 +624,7 @@
             <!--WORK EXPERIENCE INFO INPUTS-->
             <!--VOLUNTARY WORK INFO INPUTS-->
             <h1 class="header-span">V. Voluntary Work Or Involvement In Civic / Non Government / Voluntary Organizations</h1>
-            <div class="voluntary-work wrapper-span-full flex" id="Voluntary_Information">
+            <div class="voluntary-work wrapper-span-full flex">
                 <div class="odd-headers">
                     <label class="header-middle">NAME AND ADDRESS OF ORGANIZATION</label>
                     <label class="header-middle">INCLUSIVE DATES</label>
@@ -638,7 +657,7 @@
             <!--VOLUNTARY WORK INFO INPUTS-->
             <!--LEARNING AND DEVELOPMENT (L&D) / INTERVENTIONS / TRAINING PROGRAMS ATTENDED-->
             <h1 class="header-span">VI. Learning AND Development (L&D) / Interventions / Training Programs Attended</h1>
-            <div class="learning-development wrapper-span-full flex" id="Learning_Development_Information">
+            <div class="learning-development wrapper-span-full flex">
                 <div class="odd-headers">
                     <label class="header-middle">TITLE OF L&D INTERVENTION OR TRAINING PROGRAMS</label>
                     <label class="header-middle">INCLUSIVE DATES</label>
@@ -647,7 +666,7 @@
                     <label class="header-middle">CONDUCTED / SPONSORED BY (Write Full)</label>
                 </div>
                 <div class="odd-headers group">
-                    <input type="text" name="title" id="level" placeholder="">
+                    <input type="text" name="title" id="level">
                     <input type="text" name="dates" id="level" placeholder="">
                     <input type="text" name="hours" id="level" placeholder="">
                     <input type="text" name="id" id="level" placeholder="">
@@ -671,7 +690,7 @@
             <!--LEARNING AND DEVELOPMENT (L&D) / INTERVENTIONS / TRAINING PROGRAMS ATTENDED-->
             <!--OTHER INFORMATION-->
             <h1 class="header-span">VII. Other Information</h1>
-            <div class="other-information" id="Other_Information">
+            <div class="other-information">
                 <div class="odd-headers-three">
                     <label class="header-middle">SPECIAL SKILLS and HOBBIES</label>
                     <label class="header-middle">NON ACADEMIC DISTINCTIONS / RECOGNITION (Write in full)</label>
@@ -767,21 +786,6 @@
         document.getElementById('back').addEventListener("click", () => {
             window.location.href = "tcl.php";
         });
-
-        function get_object(idName, indexNumber=""){
-            const arrayContent = Array.from(document.getElementById(`${idName}`).children)
-            const inputObj = {}
-            arrayContent.forEach(child => {
-                const input = child.childNodes[indexNumber];
-
-                inputObj[input.name] = input.value;
-             });
-
-             return inputObj;
-        }
-
-        console.log(get_object("Personal_Information", 3));
-        console.log(get_object("Educational_Information"));
     </script>
 </body>
 </html>
