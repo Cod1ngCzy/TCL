@@ -4,6 +4,14 @@ require("connection.php");
 
 // Define tables and columns
 $tables = [
+    "admin" => [
+        "id BIGINT(10) NOT NULL AUTO_INCREMENT",
+        "admin_id VARCHAR(255) UNIQUE",
+        "admin_user VARCHAR(255) ",
+        "admin_password VARCHAR (255)",
+        "admin_access BOOLEAN",
+        "PRIMARY KEY (id)"
+    ],
     "applicant" => [
         "id BIGINT(10) NOT NULL AUTO_INCREMENT",
         "user_id VARCHAR(255) UNIQUE",

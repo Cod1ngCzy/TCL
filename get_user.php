@@ -78,7 +78,7 @@ session_start();
         }
 
         .group label{
-            font-size: 12px;
+            font-size: 16px;
             width: 20%;
             background-color: #efefef;
             padding: 5px 0px 2px 5px;
@@ -93,7 +93,7 @@ session_start();
         .group input[type="email"],
         select,
         textarea{
-            font-size: 8px;
+            font-size: 12px;
             width: 80%;
             border: none;
             padding: 0px 0px 0px 6px;
@@ -234,7 +234,7 @@ session_start();
         }
 
         .contact label{
-            font-size: 10px;
+            font-size: 14px;
             background-color: #efefef;
             padding: 5px 0px 2px 5px;
         }
@@ -269,7 +269,7 @@ session_start();
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: .5em;
+            font-size: .8em;
             border: 1px solid black;
             padding: 10px;
         }
@@ -297,7 +297,7 @@ session_start();
 
         .shrink{
             width: 100px;
-            position: absolute;
+            position: fixed;
             top: 10px;
             left: 10px
         }
@@ -370,7 +370,6 @@ session_start();
 
         main{
             width: 100%;
-            min-height: 100vh;
             font-size: 16px;
         }
 
@@ -451,11 +450,6 @@ session_start();
 
             .group-inline {
                 width: 100%;
-            }
-            
-            .other-info-span{
-                border-top: 1px solid black;
-                margin-top: 300px;
             }
             
             button{
