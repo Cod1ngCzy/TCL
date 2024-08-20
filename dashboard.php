@@ -329,7 +329,7 @@
                         echo "<td>" . htmlspecialchars($row['id']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['user_id']) . "</td>";
                         echo "<td>PENDING</td>";
-                        echo "<td><button class='delete-admin' data-user-id='" . htmlspecialchars($row['user_id']) . "' name='" . htmlspecialchars($row['user_id']) . "'>View</button></td>";
+                        echo "<td><button class='view-button' data-user-id='" . htmlspecialchars($row['user_id']) . "' name='" . htmlspecialchars($row['user_id']) . "'>View</button></td>";
                         echo "</tr>";
                     }
                 } else {
@@ -351,7 +351,7 @@
                                 echo "<div class='view'>";
                                 echo "<br> <input type='text' value='${row['admin_user']}' readonly>";
                                 echo "<input type='text' value='Elevated' readonly>";
-                                echo "<td><button class='view-button' data-user-id='" . htmlspecialchars($row['admin_user']) . "' name='" . htmlspecialchars($row['admin_user']) . "'>Delete Account</button></td>";
+                                echo "<td><button class='delete-admin' data-user-id='" . htmlspecialchars($row['admin_user']) . "' name='" . htmlspecialchars($row['admin_user']) . "'>Delete Account</button></td>";
                                 echo "</div>";
                             }
                         }
@@ -366,7 +366,7 @@
         </div>
         <script>
             const viewBtn = document.querySelectorAll('.view-button');
-            const deleteBtn = document.querySelectorAll('.delete-button');
+            const deleteBtn = document.querySelectorAll('.delete-admin');
             const applicantPage = document.querySelector('.show_table');
             const adminPage = document.querySelector('.show_admin');
             const applicantBtn = document.getElementById("applicant");
@@ -380,7 +380,7 @@
             });
 
             deleteBtn.forEach(btn => {
-                btn.addEventListener("click" () => {
+                btn.addEventListener("click", () => {
                     window.location.href = `/Test/delete_adm.php?adminId=${btn.name}`;
                 });
             });
