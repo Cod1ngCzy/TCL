@@ -4,16 +4,27 @@
     require("./static/connection.php");
 
     $flash_message = new FlashMessage();
+    $admin_user = isset($_POST["log_user"]);
+    $admin_pass = isset($_POST["log_pass"]);
+
+    $query = "SELECT * FROM admin WHERE admin_user = '$admin_user' LIMIT 1 ";
+    $query_response = mysqli_query($sql_connection, $query);
+    $admin = mysqli_fetch_assoc($query_response);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST["log_user"]) && isset($_POST["log_pass"])) {
-            if($_POST["log_user"] == 'tcladmin'){
-                if($_POST['log_pass'] == 'loc@ladm1n'){
+        if (isset($admin_user) && isset($admin_pass)) {
+            if($admin_user == 'tcladmin'){
+                if($admin_pass == 'loc@ladm1n'){
                     $_SESSION['ADMIN'] = true;
                     header("Location: dashboard.php");
                 }
             }
-        } 
+        } else if ($admin_user == $admin['admin_user']){
+            if($admin_pass == $admin['admin_password']){
+                $_SESSION['ADMIN'] = true;
+                header("Location: dashboard.php");
+            }
+        }
     }
 ?>
 <!DOCTYPE html>
