@@ -35,7 +35,6 @@
         }
 
         header,
-        main,
         form,
         .form-group label,
         .form-group{
@@ -45,9 +44,12 @@
         }
 
         main{
-            width: 100%;
-            min-height:800px;
+            display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 100vh;
             font-family: "Montserrat", sans-serif;
             font-optical-sizing: auto;
             font-style: normal;
