@@ -1,6 +1,5 @@
 <?php
     session_start();
-    unset(%_)
 ?>
 <!DOCTYPE html>
 <html lang="en">
