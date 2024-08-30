@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/13d0477f-8cf9-44a4-a1a1-0e6af067abfe)# TCL Company Website
+# TCL Company Website
 
 ## Overview
 
@@ -23,24 +23,30 @@ I made this website while an Intern at TCL and it's one of their prerequisite be
 ## Installation
 
 To run the TCL project locally, follow these steps:
+!Make sure that the installation of XAMPP is done first before cloning the github repository!
 
-1. **Clone the repository**:
+1. **Set up the environment**:
+
+   - Ensure you have a web server like Apache or Nginx installed. (I have used XAMPP for this demonstration)
+   - Install XAMPP `https://www.apachefriends.org/`
+     ![image](https://github.com/user-attachments/assets/31378a77-fdfd-4f67-bfdc-603e6e5b8f94)
+   - After Installation start the Apache and MYSQL tab from the control panel. | Apache is for setting up the local host while MySQL is entirely for database |
+   - If the modules appeared green on the control panel, it means the server is running.
+     ![image](https://github.com/user-attachments/assets/15a1e39f-ce19-45bb-976d-ab592437efa7)
+     
+2. **Clone the repository**:
     ```bash
     git clone https://github.com/yourusername/tcl-website.git
     cd tcl-website
     ```
+    - Or Export the files manually on the htdocs folder of XAMPP Folder
+    - Go to the directory of where you have installed XAMMP and look for htdocs. this repository should be inside the htdocs folder or XAMPP/Apache can't run this website.
+   ![image](https://github.com/user-attachments/assets/2bff16dd-e5b2-43f8-bdae-2faeab4643c6)
 
-2. **Set up the environment**:
-
-   - Ensure you have a web server like Apache or Nginx installed. (I have used XAMPP for this demonstration)
-   - Install XAMPP `https://www.apachefriends.org/`
-   - After Installation start the Apache and MYSQL tab from the control panel. | Apache is for setting up the local host while MySQL is entirely for database |
-   - If the modules appeared green on the control panel, it means the server is running.
-
-3. **Set up the database**:
+4. **Set up the database**:
    - Database is hardcoded and automatically creates when you run the website on Xampp
 
-4. **Run the server**:
+5. **Run the server**:
    - Start your local web server and navigate to `http://localhost/tcl.php` to see the website.
 
 ## Usage
@@ -54,4 +60,5 @@ To run the TCL project locally, follow these steps:
   2. Access the admin dashboard to manage applicants.
   3. View, approve, or reject applications.
   4. Manage job postings and other administrative tasks.
+
 
