@@ -36,8 +36,8 @@ To run the TCL project locally, follow these steps:
      
 2. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/tcl-website.git
-    cd tcl-website
+    https://github.com/Cod1ngCzy/TCL.git
+    cd TCL
     ```
     - Or Export the files manually on the htdocs folder of XAMPP Folder
     - Go to the directory of where you have installed XAMMP and look for htdocs. this repository should be inside the htdocs folder or XAMPP/Apache can't run this website.
